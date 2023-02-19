@@ -111,8 +111,8 @@ function Sidebar({ isNonMobile, user, isSidebarOpen, setIsSidebarOpen, drawerWid
                         <Box m="1.5rem 2rem 2rem 3rem">
                             <Flexbetween color={theme.palette.secondary.main}>
                                 <Box display="flex" alignItems="center" gap="0.5rem">
-                                    <Typography variant="h4" fontWeight="bold">
-                                        BOOKYOURBUS
+                                    <Typography variant="h3" fontWeight="bold">
+                                        e-VOLFER
                                     </Typography>
                                 </Box>
                                 {!isNonMobile && (
