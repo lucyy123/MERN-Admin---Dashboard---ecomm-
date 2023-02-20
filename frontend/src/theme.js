@@ -20,8 +20,8 @@ export const tokensDark = {
       200: "#a6a9be",
       300: "#7a7f9d",
       400: "#4d547d",
-      500: "#21295c",
-      600: "#191F45", // manually adjusted
+      500: "#0d0d0f",
+      600: "#07080d", // manually adjusted
       700: "#141937",
       800: "#0d1025",
       900: "#070812",
@@ -56,6 +56,10 @@ export const tokensDark = {
     });
     return reversedTokens;
   }
+
+
+
+  
   export const tokensLight = reverseTokens(tokensDark);
   
   // mui theme settings

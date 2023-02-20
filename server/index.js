@@ -42,8 +42,7 @@ app.use('/general',generalRoutes)
 
 /* MONGODB SETUP */
 const PORT=process.env.PORT || 9001
-console.log(process.env.MONGO_URL)
-mongoose.connect("mongodb://localhost:27017/dashboard",{
+mongoose.connect(process.env.MONGO_URL,{
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(()=>{
