@@ -49,11 +49,11 @@ mongoose.connect(process.env.MONGO_URL,{
     app.listen(PORT,()=>{
         console.log(`server is running on ${PORT}`)
     })
-    
+    // User.insertMany(dataUser)
     // Product.insertMany( dataProduct)
-    // ProductStat.insertMany( dataProductStat)
-    // Transactions.insertMany( dataTransaction)
-    // Overview.insertMany(dataOverallStat)
+//     ProductStat.insertMany( dataProductStat)
+//     Transactions.insertMany( dataTransaction)
+//     Overview.insertMany(dataOverallStat)
 // AffiliatStat.insertMany(dataAffiliateStat)
     console.log(`server is connect to database`)
       
