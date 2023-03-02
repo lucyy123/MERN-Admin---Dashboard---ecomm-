@@ -20,7 +20,7 @@ function Layout() {
 
 
   return (
-    <Box display={isNonMobile ? "flex" : "block"} width='100%' height='100%'>
+    <Box display={isNonMobile ? "flex" : "flex"} width='100%' height='100%'>
 
       <Sidebar
         user={data || {}}

@@ -89,7 +89,7 @@ function Sidebar({ isNonMobile, user, isSidebarOpen, setIsSidebarOpen, drawerWid
 
 
     return (
-        <Box component="nav" height='100%' overflow='hidden' ml='2.5rem'>
+        <Box component="nav" height='100%' overflow='hidden' ml={isNonMobile?'2.25rem':'none'}>
             {isSidebarOpen && (
                 <Drawer
                     open={isSidebarOpen}
