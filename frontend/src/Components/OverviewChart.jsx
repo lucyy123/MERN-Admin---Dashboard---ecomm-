@@ -22,7 +22,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
       data: [],
     };
 
-    Object.values(monthlyData).reduce(
+    Object.values(monthlyData)?.reduce(
       (acc, { month, totalSales, totalUnits }) => {
         const curSales = acc.sales +  Number(totalSales);
         const curUnits = acc.units + Number(totalUnits);

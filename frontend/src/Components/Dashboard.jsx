@@ -20,6 +20,7 @@ import Flexbetween from "./flexBetween";
 import OverviewChart from "./OverviewChart";
 import StatBox from "./StatBox";
 
+
 const Dashboard = () => {
   const theme = useTheme();
   const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
@@ -62,7 +63,6 @@ const Dashboard = () => {
         
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
         
-
         <Box>
           <Button
             sx={{
@@ -92,7 +92,7 @@ const Dashboard = () => {
         {/* ROW 1 */}
         <StatBox
           title="Total Customers"
-          value={data && data.totalCustomers}
+          value={data && data?.totalCustomers}
           increase="+14%"
           description="Since last month"
           icon={
@@ -103,7 +103,7 @@ const Dashboard = () => {
         />
         <StatBox
           title="Sales Today"
-          value={data && data.todayStat.totalSales}
+          value={data && data?.todayStat.totalSales}
           increase="+21%"
           description="Since last month"
           icon={
@@ -123,7 +123,7 @@ const Dashboard = () => {
         </Box>
         <StatBox
           title="Monthly Sales"
-          value={data && data.thismonthStat.totalSales}
+          value={data && data?.thismonthStat.totalSales}
           increase="+5%"
           description="Since last month"
           icon={
@@ -134,7 +134,7 @@ const Dashboard = () => {
         />
         <StatBox
           title="Yearly Sales"
-          value={data && data.yearlySalesTotal}
+          value={data && data?.yearlySalesTotal}
           increase="+43%"
           description="Since last month"
           icon={
@@ -177,7 +177,7 @@ const Dashboard = () => {
           <DataGrid
             loading={isLoading || !data}
             getRowId={(row) => row._id}
-            rows={(data && data.transactions) || []}
+            rows={(data && data?.transactions) || []}
             columns={columns}
           />
         </Box>

@@ -93,7 +93,7 @@ function Products() {
         columnGap='1.33%'
         sx={{ '& > div': { gridColumn: isNonMobile ? undefined : 'span 4' } }}
       >
-        {data.map(({ _id,
+        {data?.map(({ _id,
           name,
           description,
           price,

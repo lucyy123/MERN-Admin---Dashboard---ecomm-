@@ -28,7 +28,7 @@ const theme=useTheme()
                    
                    data={data}
                   
-                   features={geoData.features}
+                   features={geoData?.features}
                    theme={{
                     axis: {
                       domain: {
