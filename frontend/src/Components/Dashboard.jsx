@@ -1,24 +1,23 @@
-import React from "react";
-import Flexbetween from "./flexBetween";
-import Header from "usabled/Header";
 import {
   DownloadOutlined,
   Email,
-  PointOfSale,
   PersonAdd,
+  PointOfSale,
   Traffic,
 } from "@mui/icons-material";
 import {
   Box,
   Button,
   Typography,
-  useTheme,
   useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
-import BreakdownChart from "./BreakDownChart";
-import OverviewChart from "./OverviewChart";
 import { useGetDashboardQuery } from "states/api";
+import Header from "usabled/Header";
+import BreakdownChart from "./BreakDownChart";
+import Flexbetween from "./flexBetween";
+import OverviewChart from "./OverviewChart";
 import StatBox from "./StatBox";
 
 const Dashboard = () => {
@@ -58,18 +57,20 @@ const Dashboard = () => {
   ];
 
   return (
-    <Box m="1.5rem 2.5rem">
+    <Box m="0.5rem 2rem" >
       <Flexbetween>
+        
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
+        
 
         <Box>
           <Button
             sx={{
               backgroundColor: theme.palette.secondary.light,
               color: theme.palette.background.alt,
-              fontSize: "14px",
+              fontSize: "10px",
               fontWeight: "bold",
-              padding: "10px 20px",
+              padding: "5px 7px",
             }}
           >
             <DownloadOutlined sx={{ mr: "10px" }} />
@@ -79,11 +80,11 @@ const Dashboard = () => {
       </Flexbetween>
 
       <Box
-        mt="20px"
+        mt="10px"
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
         gridAutoRows="160px"
-        gap="20px"
+        gap="10px"
         sx={{
           "& > div": { gridColumn: isNonMediumScreens ? undefined : "span 12" },
         }}
@@ -96,7 +97,7 @@ const Dashboard = () => {
           description="Since last month"
           icon={
             <Email
-              sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
+              sx={{ color: theme.palette.secondary[300], fontSize: "20px" }}
             />
           }
         />
@@ -107,7 +108,7 @@ const Dashboard = () => {
           description="Since last month"
           icon={
             <PointOfSale
-              sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
+              sx={{ color: theme.palette.secondary[300], fontSize: "20px" }}
             />
           }
         />
@@ -115,7 +116,7 @@ const Dashboard = () => {
           gridColumn="span 8"
           gridRow="span 2"
           backgroundColor={theme.palette.background.alt}
-          p="1rem"
+          p="0.5rem"
           borderRadius="0.55rem"
         >
           <OverviewChart view="sales" isDashboard={true} />
@@ -127,7 +128,7 @@ const Dashboard = () => {
           description="Since last month"
           icon={
             <PersonAdd
-              sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
+              sx={{ color: theme.palette.secondary[300], fontSize: "20px" }}
             />
           }
         />
@@ -138,7 +139,7 @@ const Dashboard = () => {
           description="Since last month"
           icon={
             <Traffic
-              sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
+              sx={{ color: theme.palette.secondary[300], fontSize: "20px" }}
             />
           }
         />
@@ -184,7 +185,7 @@ const Dashboard = () => {
           gridColumn="span 4"
           gridRow="span 3"
           backgroundColor={theme.palette.background.alt}
-          p="1.5rem"
+          p="1rem"
           borderRadius="0.55rem"
         >
           <Typography variant="h6" sx={{ color: theme.palette.secondary[100] }}>
@@ -192,8 +193,8 @@ const Dashboard = () => {
           </Typography>
           <BreakdownChart isDashboard={true} />
           <Typography
-            p="0 0.6rem"
-            fontSize="0.8rem"
+            p="0 0.3rem"
+            fontSize="0.4rem"
             sx={{ color: theme.palette.secondary[200] }}
           >
             Breakdown of real states and information via category for revenue

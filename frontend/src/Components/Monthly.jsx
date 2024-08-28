@@ -1,9 +1,8 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, } from "react";
 import { Box, useTheme } from "@mui/material";
 import Header from "usabled/Header";
 import { ResponsiveLine } from "@nivo/line";
 import { useGetSalesQuery } from "states/api";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 const Monthly = () => {

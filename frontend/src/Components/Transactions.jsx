@@ -1,15 +1,14 @@
-import React, { useState } from 'react'
-import { Box, useTheme } from '@mui/system'
-import Header from '../usabled/Header'
+import { Box, } from '@mui/system'
 import { DataGrid } from '@mui/x-data-grid'
+import { useState } from 'react'
 import { useGetTransactionsQuery } from 'states/api'
 import DataGridCustomToolbar from '../usabled/DataGridCustomToolbar'
+import Header from '../usabled/Header'
 
 
 
 
 function Transactions() {
-  const theme = useTheme()
   const [page, setPage] = useState(0)
   const [pageSize, setPageSize] = useState(20)
   const [sort, setSort] = useState({})
@@ -66,8 +65,9 @@ function Transactions() {
           loading={isLoading || !data}
           getRowId={(row) => row._id}
           columns={columns}
-          rows={data && data.transactions || []}
-          rowCount={(data && data.total) || 0}
+          // eslint-disable-next-line no-mixed-operators
+          rows={data && data?.transactions || []}
+          rowCount={(data && data?.total) || 0}
           pagination
           rowsPerPageOptions={[20,50,100]}
           paginationMode='server'
