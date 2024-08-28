@@ -1,4 +1,4 @@
-import { Box, useMediaQuery, Rating, Typography, Card, CardItem, Button, useTheme, CardContent, CardActions, Collapse } from '@mui/material'
+import { Box, useMediaQuery, Rating, Typography, Card, Button, useTheme, CardContent, CardActions, Collapse } from '@mui/material'
 import React, { useState } from 'react'
 import Header from '../usabled/Header'
 import { useGetProductsQuery } from 'states/api'

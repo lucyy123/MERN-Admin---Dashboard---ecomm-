@@ -1,11 +1,11 @@
-import { Box } from '@mui/system'
-import React, { useState } from 'react'
-import Navbar from './Navbar'
-import { Outlet } from 'react-router-dom'
 import { useMediaQuery } from '@mui/material'
-import Sidebar from './Sidebar'
-import { useGetUserQuery } from 'states/api'
+import { Box } from '@mui/system'
+import { useState } from 'react'
 import { useSelector } from 'react-redux'
+import { Outlet } from 'react-router-dom'
+import { useGetUserQuery } from 'states/api'
+import Navbar from './Navbar'
+import Sidebar from './Sidebar'
 
 
 
@@ -20,15 +20,16 @@ function Layout() {
 
 
   return (
-    <Box display={isNonMobile ? "flex" : "flex"} width='100%' height='100%'>
+    <Box display={isNonMobile ? "flex" : "flex"} width='100%' height='100%' gap={5}>
 
       <Sidebar
         user={data || {}}
         isNonMobile={isNonMobile}
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
-        drawerWidth="15.652rem">
+        drawerWidth="13rem">
       </Sidebar>
+
       <Box flexGrow={1}>
         <Navbar
           user={data || {}}

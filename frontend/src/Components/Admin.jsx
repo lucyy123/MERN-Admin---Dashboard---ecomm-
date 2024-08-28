@@ -1,8 +1,7 @@
-import { Box} from '@mui/material'
-import React from 'react'
-import Header from 'usabled/Header'
-import { useGetAdminQuery } from 'states/api';
+import { Box } from '@mui/material';
 import { DataGrid } from '@mui/x-data-grid';
+import { useGetAdminQuery } from 'states/api';
+import Header from 'usabled/Header';
 
 
 const columns = [
@@ -57,7 +56,7 @@ console.log('data:', data)
       <DataGrid
         loading={isLoading||!data}
         getRowId={(row)=>row._id}
-        rows={data||[]}
+        rows={data?.admins||[]}
         columns={columns}
         ></DataGrid>
       </Box>

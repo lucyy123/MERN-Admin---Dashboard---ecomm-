@@ -1,26 +1,26 @@
-import React, { useState } from "react";
 import {
-  LightModeOutlined,
+  ArrowDropDownOutlined,
   DarkModeOutlined,
+  LightModeOutlined,
   Menu as MenuIcon,
   Search,
   SettingsOutlined,
-  ArrowDropDownOutlined,
 } from "@mui/icons-material";
-import Flexbetween from "./flexBetween";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
-import setMode from '../states/index'
+import setMode from '../states/index';
+import Flexbetween from "./flexBetween";
 
 import {
   AppBar,
-  Button,
   Box,
-  Typography,
+  Button,
   IconButton,
   InputBase,
-  Toolbar,
   Menu,
   MenuItem,
+  Toolbar,
+  Typography,
   useTheme,
 } from "@mui/material";
 

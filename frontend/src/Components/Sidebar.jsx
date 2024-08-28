@@ -1,24 +1,30 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 
-import { useNavigate, useLocation } from 'react-router-dom'
 import {
-
     Box, Divider,
     Drawer, IconButton, List,
     ListItem, ListItemButton,
-    ListItemIcon, Typography,
-    ListItemText, useTheme
+    ListItemIcon,
+    ListItemText,
+    Typography,
+    useTheme
 } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 
 import {
-    SettingsOutlined, ChevronLeft,
-    ChevronRightOutlined, HomeOutlined,
-    ShoppingCartOutlined, Groups2Outlined,
+    AdminPanelSettingsOutlined,
+    CalendarMonthOutlined,
+    ChevronLeft,
+    ChevronRightOutlined,
+    Groups2Outlined,
+    HomeOutlined,
+    PieChartOutlined,
+    PointOfSaleOutlined,
+    PublicOutlined,
     ReceiptLongOutlined,
-    PublicOutlined, PointOfSaleOutlined,
-    TodayOutlined, CalendarMonthOutlined, AdminPanelSettingsOutlined,
-    TrendingUpOutlined, PieChartOutlined
-
+    SettingsOutlined,
+    ShoppingCartOutlined,
+    TodayOutlined
 } from '@mui/icons-material'
 
 import Flexbetween from './flexBetween'
@@ -89,7 +95,7 @@ function Sidebar({ isNonMobile, user, isSidebarOpen, setIsSidebarOpen, drawerWid
 
 
     return (
-        <Box component="nav" height='100%' overflow='hidden' ml={isNonMobile?'2.25rem':'none'}>
+        <Box component="nav" height='100%' overflow='hidden' ml={isNonMobile?'1.25rem':'none'}>
             {isSidebarOpen && (
                 <Drawer
                     open={isSidebarOpen}
@@ -108,10 +114,10 @@ function Sidebar({ isNonMobile, user, isSidebarOpen, setIsSidebarOpen, drawerWid
                     }}
                 >
                     <Box width="100%">
-                        <Box m="1.5rem 2rem 2rem 3rem">
+                        <Box m="1rem 1.5rem 1.5rem 2rem">
                             <Flexbetween color={theme.palette.secondary.main}>
                                 <Box display="flex" alignItems="center" gap="0.5rem">
-                                    <Typography variant="h3" fontWeight="bold">
+                                    <Typography variant="h4" fontWeight="bold">
                                         e-VOLFER
                                     </Typography>
                                 </Box>
@@ -126,7 +132,7 @@ function Sidebar({ isNonMobile, user, isSidebarOpen, setIsSidebarOpen, drawerWid
                             {navItems.map(({ text, icon }) => {
                                 if (!icon) {
                                     return (
-                                        <Typography key={text} sx={{ m: "2.25rem 0 1rem 3rem" }}>
+                                        <Typography key={text} sx={{ m: "1.5rem 0 0.7rem 2rem" }}>
                                             {text}
                                         </Typography>
                                     );
@@ -153,7 +159,7 @@ function Sidebar({ isNonMobile, user, isSidebarOpen, setIsSidebarOpen, drawerWid
                                         >
                                             <ListItemIcon
                                                 sx={{
-                                                    ml: "2rem",
+                                                    ml: "1rem",
                                                     color:
                                                         active === lcText
                                                             ? theme.palette.primary[600]
@@ -172,29 +178,29 @@ function Sidebar({ isNonMobile, user, isSidebarOpen, setIsSidebarOpen, drawerWid
                             })}
                         </List>
                     </Box>
-
+{/* --------------------------------------user info--------------------------- */}
                     <Box position="absolute" bottom="2rem">
                         <Divider />
-                        <Flexbetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
+                        <Flexbetween textTransform="none" gap="0.6rem" m="1rem 1rem 0 2rem">
                             <Box
                                 component="img"
                                 alt="profile"
                                 src={'https://tse3.mm.bing.net/th?id=OIP.Lpx9j83qR_cfQuaPHuvwWQHaHw&pid=Api&P=0'}
-                                height="40px"
-                                width="40px"
+                                height="25px"
+                                width="25px"
                                 borderRadius="50%"
                                 sx={{ objectFit: "cover" }}
                             />
                             <Box textAlign="left">
                                 <Typography
                                     fontWeight="bold"
-                                    fontSize="0.9rem"
+                                    fontSize="0.65rem"
                                     sx={{ color: theme.palette.secondary[100] }}
                                 >
                                     {user.name}
                                 </Typography>
                                 <Typography
-                                    fontSize="0.8rem"
+                                    fontSize="0.45rem"
                                     sx={{ color: theme.palette.secondary[200] }}
                                 >
                                     {user.occupation}
@@ -203,7 +209,7 @@ function Sidebar({ isNonMobile, user, isSidebarOpen, setIsSidebarOpen, drawerWid
                             <SettingsOutlined
                                 sx={{
                                     color: theme.palette.secondary[300],
-                                    fontSize: "25px ",
+                                    fontSize: "18px ",
                                 }}
                             />
                         </Flexbetween>
